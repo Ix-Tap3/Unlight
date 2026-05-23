@@ -10,8 +10,7 @@ const JUMP_VELOCITY = 4.5
 
 func _process(delta: float) -> void:
 	mouse_pos = get_viewport().get_mouse_position()
-	torch_dir = get_viewport().get_mouse_position().angle()
-	torch_dir = torch_dir * torch_dir
+	torch_dir = get_viewport().get_mouse_position().angle() * 2
 
 	torch_dir = get_viewport().get_mouse_position().angle()
 	torch_light.rotation.y = torch_dir
