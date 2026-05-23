@@ -20,6 +20,21 @@ func handle_rotation(angle:String) -> void :
 	if angle == 'L':
 		angle_cible += deg_to_rad(-45)
 		
+		
+		
+
+func _anim():
+	if (Input.is_action_pressed("down")):
+		animSprite.play("down")
+	elif(Input.is_action_pressed("up")):
+		animSprite.play("up")
+	elif(Input.is_action_pressed("left")):
+		animSprite.play("left")
+	elif(Input.is_action_pressed("right")):
+		animSprite.play("right")
+	else :
+		animSprite.play("idle")
+
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_origin = camera.project_ray_origin(mouse_pos)    
@@ -43,17 +58,8 @@ func _process(delta: float) -> void:
 	
 	var direction:Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if (direction):
-		if (direction.x < 0.1):
-			if (self.global_rotation_degrees.y <= -85 or self.global_rotation_degrees.y >= 85):
-				animSprite.flip_h = false
-			else :
-				animSprite.flip_h = true
-		else :
-			if (self.global_rotation_degrees.y <= -85 or self.global_rotation_degrees.y >= 85):
-				animSprite.flip_h = true
-			else :
-				animSprite.flip_h = false
-		animSprite.play("run")
+		print("direcion : ", direction)
+		_anim()
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
