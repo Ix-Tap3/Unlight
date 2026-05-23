@@ -58,7 +58,6 @@ func _process(delta: float) -> void:
 		animSprite.play("run")
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		print("dir : ")
 	else:
 		animSprite.play("idle")
 		velocity.z = 0
@@ -77,3 +76,8 @@ func _process(delta: float) -> void:
 
 func _on_camera_rotation_cooldown_timeout() -> void:
 	canrotate = true
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print("body", body)
+	body.visible = true
