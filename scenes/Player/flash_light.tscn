@@ -11,3 +11,7 @@ target_position = Vector3(0, 0, -5)
 collide_with_areas = true
 debug_shape_custom_color = Color(0, 0, 12.505682, 0.43529412)
 debug_shape_thickness = 5
+
+[node name="Cooldown" type="Timer" parent="." unique_id=882602320]
+wait_time = 0.5
+one_shot = true
