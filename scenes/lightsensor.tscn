@@ -7,6 +7,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_fp6ak"]
 
 [node name="Area3D" type="Area3D" unique_id=2045923051 groups=["lightreactive"]]
+collision_layer = 2
 script = ExtResource("1_nhnym")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1181597893 groups=["lightreactive"]]

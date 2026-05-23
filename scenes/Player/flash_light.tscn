@@ -2,17 +2,47 @@
 
 [ext_resource type="Script" uid="uid://bkafnvddfj03l" path="res://scenes/Player/flash_light.gd" id="1_c3hhe"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_c3hhe"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c3hhe"]
+lifetime_randomness = 1.0
+emission_shape_scale = Vector3(1, 1, 8)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, -0.1, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cbwjj"]
+size = Vector3(0.01, 0.01, 0.01)
+
+[sub_resource type="Skin" id="Skin_pa0jf"]
+
 [node name="SpotLight3D" type="SpotLight3D" unique_id=277005227]
-spot_range = 4096.0
+spot_range = 20.0
+spot_angle = 20.0
 script = ExtResource("1_c3hhe")
 
-[node name="RayCast3D" type="RayCast3D" parent="." unique_id=470513755]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2331146, 0)
-target_position = Vector3(0, 0, -5)
+[node name="RayCast3D" type="ShapeCast3D" parent="." unique_id=987027570]
+transform = Transform3D(0.247, 0, 0, 0, 0.247, 0, 0, 0, 7, 0, -0.024816275, 0)
+shape = SubResource("BoxShape3D_c3hhe")
+target_position = Vector3(0, 0, -0.5)
 collide_with_areas = true
 debug_shape_custom_color = Color(0, 0, 12.505682, 0.43529412)
-debug_shape_thickness = 5
 
 [node name="Cooldown" type="Timer" parent="." unique_id=882602320]
 wait_time = 0.5
+one_shot = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1181138433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.836095)
+amount = 1000
+lifetime = 8.15
+preprocess = 0.43
+randomness = 1.0
+fixed_fps = 150
+process_material = SubResource("ParticleProcessMaterial_c3hhe")
+draw_pass_1 = SubResource("BoxMesh_cbwjj")
+draw_skin = SubResource("Skin_pa0jf")
+
+[node name="CoolDownResize" type="Timer" parent="." unique_id=644735106]
+wait_time = 0.1
 one_shot = true

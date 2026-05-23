@@ -1,3 +1,3 @@
 extends Node
 
-@export var lightPower : float = 10.5;
+@export var lightPower : float = 1;
