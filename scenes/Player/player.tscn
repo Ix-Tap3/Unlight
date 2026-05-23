@@ -112,7 +112,7 @@ radius = 2.46875
 script = ExtResource("1_gqjuk")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1331324013]
-transform = Transform3D(1, 0, 0, 0, 0.9477072, -0.3191412, 0, 0.3191412, 0.9477072, 0, 1.4178244, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9477072, -0.3191412, 0, 0.3191412, 0.9477072, 0, 2.3042283, 0)
 shape = SubResource("SeparationRayShape3D_c4h5g")
 spring_length = 4.0
 margin = 0.1
