@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://v6sxy7gddaah" path="res://assets/Tiny Swords (Free Pack)/Units/Blue Units/Lancer/Lancer_Run.png" id="3_uiqp4"]
 [ext_resource type="PackedScene" uid="uid://c7xgwlc51vjp5" path="res://scenes/Player/flash_light.tscn" id="4_c4h5g"]
 
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_c4h5g"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_18ciy"]
 radius = 0.4008789
 height = 0.8017578
@@ -155,6 +157,15 @@ radius = 2.46875
 [node name="Player" type="CharacterBody3D" unique_id=1165552443]
 script = ExtResource("1_gqjuk")
 
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1331324013]
+transform = Transform3D(1, 0, 0, 0, 0.9477072, -0.3191412, 0, 0.3191412, 0.9477072, 0, 1.4178244, 0)
+shape = SubResource("SeparationRayShape3D_c4h5g")
+spring_length = 4.0
+margin = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=457525268]
+transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 1.4653292, 2.7137966)
+
 [node name="flash_light" parent="." unique_id=277005227 instance=ExtResource("4_c4h5g")]
 transform = Transform3D(-0.06453227, 0, -0.9979156, 0, 1, 0, 0.9979156, 0, -0.06453227, 0, 0, -0.016708255)
 spot_angle = 22.386946
@@ -170,9 +181,6 @@ sprite_frames = SubResource("SpriteFrames_hxkm2")
 animation = &"run"
 frame = 5
 frame_progress = 0.829117
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=457525268]
-transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 1.4653292, 2.7137966)
 
 [node name="CameraRotationCooldown" type="Timer" parent="." unique_id=663444488]
 wait_time = 0.2

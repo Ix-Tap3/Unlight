@@ -5,7 +5,7 @@ var torch_blink:bool = false
 var torch_dir:float
 var mouse_pos:Vector2
 @onready var torch_light = $flash_light
-@onready var camera = $Camera3D 
+@onready var camera = $SpringArm3D/Camera3D 
 @export var SPEED:float = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var animSprite:AnimatedSprite3D = $AnimatedSprite3D

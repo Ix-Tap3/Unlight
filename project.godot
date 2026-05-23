@@ -27,6 +27,7 @@ window/size/viewport_height=1080
 [filesystem]
 
 import/blender/enabled=false
+
 [global_group]
 
 lightsource="a source that emit light "
