@@ -160,10 +160,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.019042969, 0)
 shape = SubResource("CapsuleShape3D_18ciy")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=654218247]
+gi_mode = 2
+shaded = true
 sprite_frames = SubResource("SpriteFrames_hxkm2")
 animation = &"run"
 frame = 5
 frame_progress = 0.829117
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=457525268]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.799928, 2.7137966)
+transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 1.4653292, 2.7137966)
+
+[node name="CameraRotationCooldown" type="Timer" parent="." unique_id=663444488]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="CameraRotationCooldown" to="." method="_on_camera_rotation_cooldown_timeout"]
