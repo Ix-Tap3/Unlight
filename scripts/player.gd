@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var torch_blink:bool = false
+@onready var torch_count:int = 3
 var torch_dir:float
 var mouse_pos:Vector2
 @onready var torch_light = $flash_light
@@ -10,6 +12,7 @@ const JUMP_VELOCITY = 4.5
 var canrotate:bool = true;
 var angle_cible:float = 0.0;
 @onready var CameraCoolDown:Timer = $CameraRotationCooldown
+@onready var blinkTimer:Timer = $TorchBlinking
 
 func handle_rotation(angle:String) -> void :
 	if angle == 'R':
@@ -40,7 +43,6 @@ func _process(delta: float) -> void:
 	
 	var direction:Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if (direction):
-		print (self.global_rotation_degrees)
 		if (direction.x < 0.1):
 			if (self.global_rotation_degrees.y <= -85 or self.global_rotation_degrees.y >= 85):
 				animSprite.flip_h = false
@@ -50,12 +52,10 @@ func _process(delta: float) -> void:
 			if (self.global_rotation_degrees.y <= -85 or self.global_rotation_degrees.y >= 85):
 				animSprite.flip_h = true
 			else :
-				print("last")
 				animSprite.flip_h = false
 		animSprite.play("run")
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
-		print("dir : ")
 	else:
 		animSprite.play("idle")
 		velocity.z = 0
@@ -74,3 +74,29 @@ func _process(delta: float) -> void:
 
 func _on_camera_rotation_cooldown_timeout() -> void:
 	canrotate = true
+
+func _on_torch_blinking_timeout() -> void:
+	torch_count -= 1
+	print("count : ", torch_count)
+	print("light : ", torch_light.light_energy)
+	if (torch_count == 0):
+		torch_blink = false
+		torch_count = 3
+		torch_light.light_energy = 1
+	else:
+		blinkTimer.start()
+		if (torch_count % 2 == 0):
+			torch_light.light_energy = 0
+		else:
+			torch_light.light_energy = 1
+
+
+func _torch_blink():
+		blinkTimer.start()
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+		if (body.is_in_group("monstre") && torch_blink == false):
+			torch_blink = true
+			_torch_blink()
+		#_torch_blinking(body)sd

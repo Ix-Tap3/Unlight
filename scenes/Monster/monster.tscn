@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cfr8cxe00lllp"]
+
+[ext_resource type="Texture2D" uid="uid://bi6kk4q765dl3" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Monk/Idle.png" id="1_rg2ae"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd1pl"]
+atlas = ExtResource("1_rg2ae")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuq6v"]
+atlas = ExtResource("1_rg2ae")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4w75"]
+atlas = ExtResource("1_rg2ae")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsbur"]
+atlas = ExtResource("1_rg2ae")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bchkb"]
+atlas = ExtResource("1_rg2ae")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1him"]
+atlas = ExtResource("1_rg2ae")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mntuo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd1pl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuq6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4w75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsbur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bchkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1him")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r1hw2"]
+radius = 0.4711914
+height = 1.1091309
+
+[node name="Monster" type="CharacterBody3D" unique_id=936662399 groups=["Maaannnstr", "monstre"]]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1903926847]
+sprite_frames = SubResource("SpriteFrames_mntuo")
+animation = &"idle"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1545575510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013061523, 0)
+shape = SubResource("CapsuleShape3D_r1hw2")

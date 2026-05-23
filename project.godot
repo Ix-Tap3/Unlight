@@ -23,11 +23,11 @@ Var="*uid://deawngm5347kp"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 
 [global_group]
 
 lightsource="a source that emit light "
+monstre=""
 
 [input]
 
