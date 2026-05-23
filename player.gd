@@ -16,13 +16,13 @@ func _process(delta: float) -> void:
 	#torch_dir = get_viewport().get_mouse_position().angle()
 	torch_light.rotation.y = torch_dir
 	# Add the gravity.
-	#if not is_on_floor():
-		#velocity += get_gravity() * delta
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 #
 	## Handle jump.
-	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		#velocity.y = JUMP_VELOCITY
-	
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+	#
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	
 	var direction:Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

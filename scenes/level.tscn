@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dj86nqpqd6fgt"]
 
 [ext_resource type="MeshLibrary" uid="uid://crev0m3yug1ho" path="res://assets/wolrd_mesh_lib.tres" id="1_2q6dc"]
+[ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_w7c3h"]
 
 [node name="level" type="Node3D" unique_id=1688704413]
 
@@ -12,10 +13,10 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=981963205]
-transform = Transform3D(-0.9700631, 0, -0.24285322, 0, 1, 0, 0.24285322, 0, -0.9700631, -0.13576078, 1.9581637, -4.7307186)
-
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2009212828]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.549386, 4.5229936, -1.2534976)
 light_energy = 4.644
 omni_range = 8.0
+
+[node name="Player" parent="." unique_id=1165552443 instance=ExtResource("2_w7c3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -4)
