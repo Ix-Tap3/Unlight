@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d1nehbmhrx8x6"]
+
+[ext_resource type="PackedScene" uid="uid://bpkiq6wsvy14w" path="res://scenes/grass_block_1.tscn" id="1_7x42i"]
+[ext_resource type="PackedScene" uid="uid://bt4jhw8v7n40h" path="res://scenes/grass_block_2.tscn" id="2_dlync"]
+[ext_resource type="PackedScene" uid="uid://0wmnks6yfqw3" path="res://scenes/grass_block_3.tscn" id="3_0a47b"]
+[ext_resource type="PackedScene" uid="uid://dkhdefqc5aa15" path="res://scenes/stairs_1.tscn" id="4_bco7l"]
+[ext_resource type="PackedScene" uid="uid://bj731vvkd6hjm" path="res://scenes/stairs_2.tscn" id="5_f3is2"]
+[ext_resource type="PackedScene" uid="uid://bhw0qa1ia4fka" path="res://scenes/wall_1.tscn" id="6_dlync"]
+[ext_resource type="PackedScene" uid="uid://dl8ugqfg633j8" path="res://scenes/WorldMeshLib/wall_2.tscn" id="7_wh0ui"]
+
+[node name="WorldMeshLib" type="Node3D" unique_id=2052032714]
+
+[node name="GrassBlock1" parent="." unique_id=1348567471 instance=ExtResource("1_7x42i")]
+
+[node name="GrassBlock2" parent="." unique_id=1464272524 instance=ExtResource("2_dlync")]
+
+[node name="GrassBlock3" parent="." unique_id=1533783337 instance=ExtResource("3_0a47b")]
+
+[node name="Stairs1" parent="." unique_id=1043254213 instance=ExtResource("4_bco7l")]
+
+[node name="Stairs2" parent="." unique_id=1374475649 instance=ExtResource("5_f3is2")]
+
+[node name="Wall1" parent="." unique_id=768593755 instance=ExtResource("6_dlync")]
+
+[node name="Wall2" parent="." unique_id=1302663875 instance=ExtResource("7_wh0ui")]
