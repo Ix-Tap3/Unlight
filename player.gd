@@ -19,23 +19,32 @@ func handle_rotation(angle:String) -> void :
 		
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
-	# Cast a ray from the camera through the mouse position
-	var ray_origin = camera.project_ray_origin(mouse_pos)	
+	var ray_origin = camera.project_ray_origin(mouse_pos)    
 	var ray_dir = camera.project_ray_normal(mouse_pos)
 	
-	# Find where the ray hits a plane at the character's height (Y level)
-	var plane = Plane(Vector3.UP, global_position.y)
+	# 2. On récupère la direction de la caméra
+	var direction_face_camera = camera.global_transform.basis.z
+	
+	# 3. SOLUTION : On décale le mur virtuel de 5 unités DEVANT le personnage
+	# Augmente ce chiffre (ex: 8.0) pour une visée plus douce/précise
+	# Diminue-le (ex: 3.0) pour que la lampe réagisse plus nerveusement
+	var distance_mur: float = 5.0
+	var position_du_mur = torch_light.global_position - (direction_face_camera * distance_mur)
+	
+	# 4. On crée le plan sur cette nouvelle position avancée
+	var plane = Plane(direction_face_camera, position_du_mur)
+	
 	var intersection = plane.intersects_ray(ray_origin, ray_dir)
 	
 	if intersection:
-		var look_target = intersection
-		torch_light.look_at(look_target, Vector3.UP)
-	
+		# 5. La lampe regarde le point projeté devant
+		torch_light.look_at(intersection, Vector3.UP)
+		torch_light.rotation.z = 0
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 #
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept"):# and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
 	var input_dir = Input.get_vector("left", "right", "up", "down")

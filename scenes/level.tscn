@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://by2qspltwr478" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_w7c3h"]
 
+[sub_resource type="Environment" id="Environment_w8frs"]
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.015
+
 [node name="level" type="Node3D" unique_id=1688704413]
 script = ExtResource("1_w8frs")
 
@@ -21,3 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -4)
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=443004450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4341058, 4.87815, 4.0176344)
 omni_range = 17.145
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1518285248]
+environment = SubResource("Environment_w8frs")
