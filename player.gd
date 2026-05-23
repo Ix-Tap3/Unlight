@@ -3,6 +3,7 @@ extends CharacterBody3D
 var torch_dir:float
 var mouse_pos:Vector2
 @onready var torch_light = $flash_light
+@onready var camera = $Camera3D 
 @export var SPEED:float = 5.0
 const JUMP_VELOCITY = 4.5
 @onready var animSprite:AnimatedSprite3D = $AnimatedSprite3D
@@ -17,11 +18,19 @@ func handle_rotation(angle:String) -> void :
 		angle_cible += deg_to_rad(-45)
 		
 func _process(delta: float) -> void:
-	mouse_pos = get_viewport().get_mouse_position()
-	torch_dir = get_viewport().get_mouse_position().angle() * 2
-
-	torch_dir = get_viewport().get_mouse_position().angle()
-	torch_light.rotation.y = torch_dir
+	var mouse_pos = get_viewport().get_mouse_position()
+	# Cast a ray from the camera through the mouse position
+	var ray_origin = camera.project_ray_origin(mouse_pos)	
+	var ray_dir = camera.project_ray_normal(mouse_pos)
+	
+	# Find where the ray hits a plane at the character's height (Y level)
+	var plane = Plane(Vector3.UP, global_position.y)
+	var intersection = plane.intersects_ray(ray_origin, ray_dir)
+	
+	if intersection:
+		var look_target = intersection
+		torch_light.look_at(look_target, Vector3.UP)
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 #

@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dj86nqpqd6fgt"]
 
 [ext_resource type="MeshLibrary" uid="uid://crev0m3yug1ho" path="res://assets/wolrd_mesh_lib.tres" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://by2qspltwr478" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_w7c3h"]
 
 [node name="level" type="Node3D" unique_id=1688704413]
+script = ExtResource("1_w8frs")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=715954920]
 mesh_library = ExtResource("1_2q6dc")
