@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://dl8ugqfg633j8"]
+[gd_scene format=3 uid="uid://cmc4jmme1q1gm"]
 
-[ext_resource type="Texture2D" uid="uid://by4whbb7dxos8" path="res://assets/mur.png" id="1_4glds"]
+[ext_resource type="Texture2D" uid="uid://ba2c8c8qq7jld" path="res://assets/tiles/plafond_2.png" id="1_nr2a8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw2ei"]
-albedo_texture = ExtResource("1_4glds")
+albedo_texture = ExtResource("1_nr2a8")
 uv1_scale = Vector3(3, 2, 1)
 texture_filter = 0
 
@@ -12,7 +12,7 @@ material = SubResource("StandardMaterial3D_mw2ei")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
 
-[node name="Wall1" type="MeshInstance3D" unique_id=1348567471]
+[node name="GrassBlock1" type="MeshInstance3D" unique_id=1348567471]
 mesh = SubResource("BoxMesh_mlfo1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=653166447]
