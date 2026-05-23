@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bt4jhw8v7n40h"]
+[gd_scene format=3 uid="uid://cmc4jmme1q1gm"]
 
-[ext_resource type="Texture2D" uid="uid://b5dqyrmlfx8xm" path="res://assets/tiles/grass2.png" id="1_vnqq0"]
+[ext_resource type="Texture2D" uid="uid://ba2c8c8qq7jld" path="res://assets/tiles/plafond_2.png" id="1_nr2a8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw2ei"]
-albedo_texture = ExtResource("1_vnqq0")
+albedo_texture = ExtResource("1_nr2a8")
 uv1_scale = Vector3(3, 2, 1)
 texture_filter = 0
 
