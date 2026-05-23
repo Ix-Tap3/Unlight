@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bkafnvddfj03l" path="res://scenes/Player/flash_light.gd" id="1_c3hhe"]
 
 [node name="SpotLight3D" type="SpotLight3D" unique_id=277005227]
+spot_range = 4096.0
 script = ExtResource("1_c3hhe")
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=470513755]
