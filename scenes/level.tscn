@@ -3,6 +3,7 @@
 [ext_resource type="MeshLibrary" uid="uid://crev0m3yug1ho" path="res://assets/wolrd_mesh_lib.tres" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://by2qspltwr478" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://c448jry1lhhwy" path="res://scenes/lightSource.tscn" id="4_mx8sn"]
 
 [sub_resource type="Environment" id="Environment_w8frs"]
 volumetric_fog_enabled = true
@@ -22,9 +23,13 @@ metadata/_editor_floor_ = Vector3(0, 4, 0)
 [node name="Player" parent="." unique_id=1165552443 instance=ExtResource("2_w7c3h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -4)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=443004450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4341058, 4.87815, 4.0176344)
-omni_range = 17.145
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1518285248]
 environment = SubResource("Environment_w8frs")
+
+[node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("4_mx8sn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5404701, 0.059939146, -2.605064)
+
+[node name="Node3D2" parent="." unique_id=1355627005 instance=ExtResource("4_mx8sn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5936308)
+
+[node name="Node3D3" parent="." unique_id=871136979 instance=ExtResource("4_mx8sn")]

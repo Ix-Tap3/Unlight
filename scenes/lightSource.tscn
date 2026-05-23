@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c448jry1lhhwy"]
+
+[ext_resource type="Script" uid="uid://do5dnt7ybqfw3" path="res://scenes/lightsource.gd" id="1_spjlj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fip8v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k8m2g"]
+
+[node name="Node3D" type="Node3D" unique_id=512677940]
+script = ExtResource("1_spjlj")
+
+[node name="Light" type="SpotLight3D" parent="." unique_id=136249791]
+transform = Transform3D(1, 0, 0, 0, -0.0057071573, 0.9999837, 0, -0.9999837, -0.0057071573, 0, 2.3890862, 0)
+light_energy = 16.0
+spot_angle = 75.0
+
+[node name="Area3D" type="Area3D" parent="." unique_id=412864280 groups=["lightsource"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1021873492 groups=["lightsource"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.6345649, 0)
+shape = SubResource("BoxShape3D_fip8v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D" unique_id=2112603776]
+gi_mode = 0
+mesh = SubResource("BoxMesh_k8m2g")

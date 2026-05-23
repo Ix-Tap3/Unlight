@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://c7xgwlc51vjp5"]
 
+[ext_resource type="Script" uid="uid://bkafnvddfj03l" path="res://scenes/Player/flash_light.gd" id="1_c3hhe"]
+
 [node name="SpotLight3D" type="SpotLight3D" unique_id=277005227]
+script = ExtResource("1_c3hhe")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=470513755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2331146, 0)
+target_position = Vector3(0, 0, -5)
+collide_with_areas = true
+debug_shape_custom_color = Color(0, 0, 12.505682, 0.43529412)
+debug_shape_thickness = 5
+
+[node name="Cooldown" type="Timer" parent="." unique_id=882602320]
+wait_time = 0.5
+one_shot = true
