@@ -6,6 +6,9 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_k8m2g"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_spjlj"]
+radius = 3.0
+
 [node name="Node3D" type="Node3D" unique_id=512677940]
 script = ExtResource("1_spjlj")
 
@@ -23,3 +26,10 @@ shape = SubResource("BoxShape3D_fip8v")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D" unique_id=2112603776]
 gi_mode = 0
 mesh = SubResource("BoxMesh_k8m2g")
+
+[node name="LitArea" type="Area3D" parent="." unique_id=388491262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3860457, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LitArea" unique_id=886466319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3221521, 0)
+shape = SubResource("CylinderShape3D_spjlj")

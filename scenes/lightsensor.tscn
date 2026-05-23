@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cx5x4lbg4x0hn"]
+
+[ext_resource type="Script" uid="uid://b4pw36cws7wi2" path="res://scripts/lightsensor.gd" id="1_nhnym"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjcsv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fp6ak"]
+
+[node name="Area3D" type="Area3D" unique_id=2045923051 groups=["lightreactive"]]
+script = ExtResource("1_nhnym")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1181597893 groups=["lightreactive"]]
+shape = SubResource("BoxShape3D_vjcsv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1871712433]
+mesh = SubResource("BoxMesh_fp6ak")

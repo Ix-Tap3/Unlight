@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://by2qspltwr478" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://c448jry1lhhwy" path="res://scenes/lightSource.tscn" id="4_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://cx5x4lbg4x0hn" path="res://scenes/lightsensor.tscn" id="5_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://cq8tsvwmq7mff" path="res://scenes/lightdoor.tscn" id="6_2r41h"]
 
 [sub_resource type="Environment" id="Environment_w8frs"]
 volumetric_fog_enabled = true
@@ -26,10 +28,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -4)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1518285248]
 environment = SubResource("Environment_w8frs")
 
-[node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("4_mx8sn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5404701, 0.059939146, -2.605064)
-
 [node name="Node3D2" parent="." unique_id=1355627005 instance=ExtResource("4_mx8sn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5936308)
 
-[node name="Node3D3" parent="." unique_id=871136979 instance=ExtResource("4_mx8sn")]
+[node name="Area3D" parent="." unique_id=2045923051 instance=ExtResource("5_ppgk2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07548857, 1.5000002, -4.348866)
+
+[node name="Area3D2" parent="." unique_id=473114492 instance=ExtResource("5_ppgk2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6400375, 3.5, 2.5470366)
+
+[node name="Door" parent="." unique_id=1019381910 instance=ExtResource("6_2r41h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5234942, -2.6868935)
