@@ -148,6 +148,10 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c4h5g"]
+height = 1.2428894
+radius = 2.46875
+
 [node name="Player" type="CharacterBody3D" unique_id=1165552443]
 script = ExtResource("1_gqjuk")
 
@@ -174,4 +178,15 @@ transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.923
 wait_time = 0.2
 one_shot = true
 
+[node name="Area3D" type="Area3D" parent="." unique_id=1610689051]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=765538238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3785553, 0)
+shape = SubResource("CylinderShape3D_c4h5g")
+
+[node name="TorchBlinking" type="Timer" parent="." unique_id=2101249697]
+wait_time = 0.2
+
 [connection signal="timeout" from="CameraRotationCooldown" to="." method="_on_camera_rotation_cooldown_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="TorchBlinking" to="." method="_on_torch_blinking_timeout"]
