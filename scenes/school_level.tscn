@@ -2,6 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://bq6356eyvq2uu" path="res://assets/world_mesh_lib.tres" id="1_u6f7f"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_mmpar"]
+[ext_resource type="PackedScene" uid="uid://c448jry1lhhwy" path="res://scenes/lightSource.tscn" id="3_mmpar"]
 
 [sub_resource type="Environment" id="Environment_u6f7f"]
 volumetric_fog_enabled = true
@@ -26,3 +27,6 @@ light_energy = 0.01
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=15072835]
 environment = SubResource("Environment_u6f7f")
+
+[node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("3_mmpar")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.477507, 2.0209937, -2.4638739)
