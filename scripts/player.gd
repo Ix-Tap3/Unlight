@@ -21,23 +21,12 @@ func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
 	var ray_origin = camera.project_ray_origin(mouse_pos)    
 	var ray_dir = camera.project_ray_normal(mouse_pos)
-	
-	# 2. On récupère la direction de la caméra
 	var direction_face_camera = camera.global_transform.basis.z
-	
-	# 3. SOLUTION : On décale le mur virtuel de 5 unités DEVANT le personnage
-	# Augmente ce chiffre (ex: 8.0) pour une visée plus douce/précise
-	# Diminue-le (ex: 3.0) pour que la lampe réagisse plus nerveusement
 	var distance_mur: float = 5.0
 	var position_du_mur = torch_light.global_position - (direction_face_camera * distance_mur)
-	
-	# 4. On crée le plan sur cette nouvelle position avancée
 	var plane = Plane(direction_face_camera, position_du_mur)
-	
 	var intersection = plane.intersects_ray(ray_origin, ray_dir)
-	
 	if intersection:
-		# 5. La lampe regarde le point projeté devant
 		torch_light.look_at(intersection, Vector3.UP)
 		torch_light.rotation.z = 0
 	if not is_on_floor():
@@ -51,10 +40,18 @@ func _process(delta: float) -> void:
 	
 	var direction:Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if (direction):
-		if (direction.x < 0):
-			animSprite.flip_h = true
+		print (self.global_rotation_degrees)
+		if (direction.x < 0.1):
+			if (self.global_rotation_degrees.y <= -85 or self.global_rotation_degrees.y >= 85):
+				animSprite.flip_h = false
+			else :
+				animSprite.flip_h = true
 		else :
-			animSprite.flip_h = false
+			if (self.global_rotation_degrees.y <= -85 or self.global_rotation_degrees.y >= 85):
+				animSprite.flip_h = true
+			else :
+				print("last")
+				animSprite.flip_h = false
 		animSprite.play("run")
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
