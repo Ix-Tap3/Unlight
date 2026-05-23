@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dkhdefqc5aa15" path="res://scenes/stairs_1.tscn" id="4_bco7l"]
 [ext_resource type="PackedScene" uid="uid://bj731vvkd6hjm" path="res://scenes/stairs_2.tscn" id="5_f3is2"]
 [ext_resource type="PackedScene" uid="uid://bhw0qa1ia4fka" path="res://scenes/wall_1.tscn" id="6_dlync"]
-[ext_resource type="PackedScene" uid="uid://dl8ugqfg633j8" path="res://scenes/WorldMeshLib/wall_2.tscn" id="7_wh0ui"]
+[ext_resource type="PackedScene" uid="uid://b3b1bqib7xnsc" path="res://assets/glb/wall2.glb" id="7_wh0ui"]
 
 [node name="WorldMeshLib" type="Node3D" unique_id=2052032714]
 
@@ -22,4 +22,4 @@
 
 [node name="Wall1" parent="." unique_id=768593755 instance=ExtResource("6_dlync")]
 
-[node name="Wall2" parent="." unique_id=1302663875 instance=ExtResource("7_wh0ui")]
+[node name="wall2" parent="." unique_id=1719665071 instance=ExtResource("7_wh0ui")]
