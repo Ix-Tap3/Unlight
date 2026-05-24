@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cvdooh5myajie"]
+
+[ext_resource type="ArrayMesh" uid="uid://bfvubpbvq4iet" path="res://assets/human.obj" id="1_itw3g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xi50h"]
+
+[node name="Node3D" type="CharacterBody3D" unique_id=660344803]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=892020111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45668554, 0)
+shape = SubResource("CapsuleShape3D_xi50h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=642989366]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.018533945, -0.17488277, -0.15810388)
+transparency = 1.0
+mesh = ExtResource("1_itw3g")

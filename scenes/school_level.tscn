@@ -3,6 +3,10 @@
 [ext_resource type="MeshLibrary" uid="uid://bq6356eyvq2uu" path="res://assets/world_mesh_lib.tres" id="1_u6f7f"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_mmpar"]
 [ext_resource type="PackedScene" uid="uid://c448jry1lhhwy" path="res://scenes/lightSource.tscn" id="3_mmpar"]
+[ext_resource type="PackedScene" uid="uid://d1tla78kwrw4w" path="res://assets/sceneassiete/table.tscn" id="4_u7ri8"]
+[ext_resource type="PackedScene" uid="uid://c2ugu276pqdyf" path="res://assets/sceneassiete/chaise.tscn" id="5_j37ly"]
+[ext_resource type="AudioStream" uid="uid://byxmt0pi3fw7h" path="res://Sound/ArsN-B12-Game-jam-test.mp3" id="6_moirl"]
+[ext_resource type="PackedScene" uid="uid://cvdooh5myajie" path="res://assets/sceneassiete/invincible.tscn" id="7_1ptiu"]
 
 [sub_resource type="Environment" id="Environment_u6f7f"]
 volumetric_fog_enabled = true
@@ -30,3 +34,17 @@ environment = SubResource("Environment_u6f7f")
 
 [node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("3_mmpar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.477507, 2.0209937, -2.4638739)
+
+[node name="Table" parent="." unique_id=1643362488 instance=ExtResource("4_u7ri8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.444393, 1, -2.118638)
+
+[node name="Chaise" parent="." unique_id=1883831162 instance=ExtResource("5_j37ly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.411152, 1, -2.1791453)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=965651313]
+stream = ExtResource("6_moirl")
+autoplay = true
+parameters/looping = true
+
+[node name="Node3D2" parent="." unique_id=660344803 instance=ExtResource("7_1ptiu")]
+transform = Transform3D(0.9984806, 0, -0.05510697, 0, 1, 0, 0.05510697, 0, 0.9984806, -11.108007, 0.063516855, 2.6462939)
