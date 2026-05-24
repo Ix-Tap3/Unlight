@@ -231,9 +231,6 @@ sprite_frames = SubResource("SpriteFrames_jn0uf")
 animation = &"help"
 frame_progress = 0.5205393
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=517426447]
-light_energy = 1.805
-
 [node name="Area3D2" type="Area3D" parent="." unique_id=1919556147 groups=["player"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=315059558 groups=["player"]]
