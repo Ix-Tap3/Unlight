@@ -666,6 +666,30 @@ transform = Transform3D(0.4, 0, -7.152558e-08, 0, 0.2, 0, 4.768372e-08, 0, 0.6, 
 [node name="bibliotheque12" parent="Props" unique_id=1080435566 instance=ExtResource("7_ex17d")]
 transform = Transform3D(-0.4, 0, 5.2453668e-08, 0, 0.4, 0, -3.4969112e-08, 0, -0.6, 5.7997365, -1.1920929e-07, -2.013547)
 
+[node name="bibliotheque14" parent="Props" unique_id=1387023533 instance=ExtResource("7_ex17d")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 14.825811, -1.1920929e-07, -2.8808117)
+
+[node name="bibliotheque16" parent="Props" unique_id=1359343138 instance=ExtResource("7_ex17d")]
+transform = Transform3D(9.735359e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, 9.735359e-08, 14.632797, -1.1920929e-07, -8.840763)
+
+[node name="bibliotheque15" parent="Props" unique_id=1853340841 instance=ExtResource("7_ex17d")]
+transform = Transform3D(-0.4, 0, 5.2453668e-08, 0, 0.4, 0, -3.4969112e-08, 0, -0.6, 14.793419, -1.1920929e-07, -2.013547)
+
+[node name="bibliotheque18" parent="Props" unique_id=106912707 instance=ExtResource("7_ex17d")]
+transform = Transform3D(0.5, 0, 1.1920929e-07, 0, 0.5, 0, -1.1920929e-07, 0, 0.5, 7.1565685, -1.1920929e-07, -3.4160178)
+
+[node name="bibliotheque21" parent="Props" unique_id=1103929524 instance=ExtResource("7_ex17d")]
+transform = Transform3D(0.5, 0, 1.1920929e-07, 0, 0.5, 0, -1.1920929e-07, 0, 0.5, 7.1565685, -1.1920929e-07, -6.0579023)
+
+[node name="bibliotheque19" parent="Props" unique_id=535596407 instance=ExtResource("7_ex17d")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.6, 7.188961, -1.1920929e-07, -4.2832823)
+
+[node name="bibliotheque20" parent="Props" unique_id=1367913597 instance=ExtResource("7_ex17d")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.6, 7.188961, -1.1920929e-07, -5.190818)
+
+[node name="bibliotheque17" parent="Props" unique_id=1952340585 instance=ExtResource("7_ex17d")]
+transform = Transform3D(5.2453668e-08, 0, 0.6, 0, 0.4, 0, -0.4, 0, 7.86805e-08, 12.9752445, -1.1920929e-07, -0.1343621)
+
 [node name="casier" parent="Props" unique_id=1926351488 instance=ExtResource("8_r5pcs")]
 transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -11.146968, 0, -0.23266813)
 
@@ -701,6 +725,33 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.86216354, 0, -1.9381
 
 [node name="casier14" parent="Props" unique_id=1363630816 instance=ExtResource("8_r5pcs")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.86216354, 0, -1.6159565)
+
+[node name="casier18" parent="Props" unique_id=1525014792 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.0013438836, 0, 0.49999824, 0, 0.5, 0, -0.49999824, 0, 0.0013438836, 7.914753, 0, -0.1470031)
+
+[node name="casier19" parent="Props" unique_id=1836455581 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.0013438836, 0, 0.49999824, 0, 0.5, 0, -0.49999824, 0, 0.0013438836, 7.261972, 0, -0.14875768)
+
+[node name="casier20" parent="Props" unique_id=1092146986 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.0013438836, 0, 0.49999824, 0, 0.5, 0, -0.49999824, 0, 0.0013438836, 7.5841246, 0, -0.14789173)
+
+[node name="casier21" parent="Props" unique_id=943416271 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.0013438836, 0, 0.49999824, 0, 0.5, 0, -0.49999824, 0, 0.0013438836, 10.377058, 0, -0.1470031)
+
+[node name="casier22" parent="Props" unique_id=169669419 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.0013438836, 0, 0.49999824, 0, 0.5, 0, -0.49999824, 0, 0.0013438836, 9.7242775, 0, -0.14875768)
+
+[node name="casier23" parent="Props" unique_id=1518767345 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.0013438836, 0, 0.49999824, 0, 0.5, 0, -0.49999824, 0, 0.0013438836, 10.04643, 0, -0.14789173)
+
+[node name="casier15" parent="Props" unique_id=294668134 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.86216354, 0, -5.675253)
+
+[node name="casier16" parent="Props" unique_id=1380830902 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.86216354, 0, -5.3530993)
+
+[node name="casier17" parent="Props" unique_id=588873626 instance=ExtResource("8_r5pcs")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.86216354, 0, -6.0058823)
 
 [node name="casier9" parent="Props" unique_id=692505243 instance=ExtResource("8_r5pcs")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.862164, 0, -1.5668631)
