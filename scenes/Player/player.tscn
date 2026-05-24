@@ -24,7 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://7dojr8pwydu5" path="res://assets/HomeMade/Player/ventouse/ventousesideleftwalk2.png" id="22_o05ft"]
 [ext_resource type="Texture2D" uid="uid://ly2ml533h4sg" path="res://assets/HomeMade/Player/ventouse/ventousesiderightwalk1.png" id="23_nbg44"]
 [ext_resource type="Texture2D" uid="uid://dgrojq2v2s01f" path="res://assets/HomeMade/Player/ventouse/ventousesiderightwalk2.png" id="24_jn0uf"]
-[ext_resource type="Texture2D" uid="uid://cm3ckws5d74fy" path="res://assets/Tiny Swords (Free Pack)/Particle FX/Water Splash.png" id="25_18ciy"]
+[ext_resource type="Texture2D" uid="uid://dx04tafnk6g0m" path="res://assets/HomeMade/ui/Aide1.png" id="26_o05ft"]
+[ext_resource type="Texture2D" uid="uid://dq6uk3l4p0rdf" path="res://assets/HomeMade/ui/Aide2.png" id="27_nbg44"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_18ciy"]
 radius = 0.1508789
@@ -149,75 +150,18 @@ radius = 2.46875
 [sub_resource type="SphereShape3D" id="SphereShape3D_hxkm2"]
 radius = 0.001
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_18ciy"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cg2hl"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o05ft"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nbg44"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jn0uf"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ni0x"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(960, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kp55c"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(1152, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_32uah"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(1344, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ihqbe"]
-atlas = ExtResource("25_18ciy")
-region = Rect2(1536, 0, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cgmen"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jn0uf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_18ciy")
+"texture": ExtResource("26_o05ft")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cg2hl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o05ft")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nbg44")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jn0uf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ni0x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kp55c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_32uah")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ihqbe")
+"texture": ExtResource("27_nbg44")
 }],
 "loop": true,
-"name": &"wasd",
-"speed": 5.0
+"name": &"help",
+"speed": 2.0
 }]
 
 [node name="Player" type="CharacterBody3D" unique_id=1165552443]
@@ -261,89 +205,31 @@ margin = 0.1
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=457525268]
 transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 2.4335585, 2.7137966)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="SpringArm3D/Camera3D" unique_id=2116609942]
-
-[node name="ProgressBar" type="TextureRect" parent="SpringArm3D/Camera3D/CanvasLayer" unique_id=846550129]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -91.0
-offset_top = -98.0
-grow_horizontal = 0
-grow_vertical = 0
-texture = ExtResource("25_18ciy")
-
-[node name="HelpMenu" type="CanvasLayer" parent="SpringArm3D/Camera3D" unique_id=282639508]
+[node name="Control" type="Control" parent="SpringArm3D/Camera3D" unique_id=677083552]
 visible = false
-
-[node name="Container" type="Control" parent="SpringArm3D/Camera3D/HelpMenu" unique_id=278265132]
 layout_mode = 3
-anchor_right = 0.128
-anchor_bottom = 0.20400001
-offset_right = -205.76001
-offset_bottom = -180.32
-
-[node name="MarginContainer" type="MarginContainer" parent="SpringArm3D/Camera3D/HelpMenu/Container" unique_id=1554715939]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="VENTOUSE" type="AnimatedSprite2D" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer" unique_id=768522007]
-position = Vector2(96, 336)
-sprite_frames = SubResource("SpriteFrames_cgmen")
-animation = &"wasd"
-frame_progress = 0.28294355
+[node name="HelpMenu" type="CanvasLayer" parent="SpringArm3D/Camera3D/Control" unique_id=282639508]
+visible = false
 
-[node name="ventouse" type="Label" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer/VENTOUSE" unique_id=1195550178]
-offset_left = 121.0
-offset_top = -14.0
-offset_right = 319.0
-offset_bottom = 9.0
-text = "Press When you're nearby to make it appear"
-
-[node name="WASD" type="AnimatedSprite2D" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer" unique_id=893765257]
-position = Vector2(96, 99)
-sprite_frames = SubResource("SpriteFrames_cgmen")
-animation = &"wasd"
-frame_progress = 0.77667737
-
-[node name="wasd" type="Label" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer/WASD" unique_id=1130195370]
-offset_left = 121.0
-offset_right = 319.0
-offset_bottom = 23.0
-text = "Use it to explore the haunted school !"
-
-[node name="CAPTURE" type="AnimatedSprite2D" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer" unique_id=635491014]
-position = Vector2(96, 788)
-sprite_frames = SubResource("SpriteFrames_cgmen")
-animation = &"wasd"
-frame_progress = 0.504963
-
-[node name="capture" type="Label" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer/CAPTURE" unique_id=1201682578]
-offset_left = 121.0
-offset_top = -240.0
-offset_right = 319.0
-offset_bottom = -217.0
-text = "Press to catch them !"
-
-[node name="FLASH_LIGHT" type="AnimatedSprite2D" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer" unique_id=704811194]
-position = Vector2(96, 560)
-sprite_frames = SubResource("SpriteFrames_cgmen")
-animation = &"wasd"
-frame_progress = 0.8843484
-
-[node name="flash_light" type="Label" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer/FLASH_LIGHT" unique_id=95321578]
-offset_left = 121.0
-offset_top = 220.0
-offset_right = 319.0
-offset_bottom = 243.0
-text = "Use your flash_light !"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="SpringArm3D/Camera3D/HelpMenu/Container/MarginContainer" unique_id=540994855]
-layout_mode = 2
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SpringArm3D/Camera3D/Control/HelpMenu" unique_id=384513447]
+position = Vector2(957, 470)
+scale = Vector2(2.4472656, 2.1958117)
+sprite_frames = SubResource("SpriteFrames_jn0uf")
+animation = &"help"
+frame_progress = 0.5205393
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=517426447]
 light_energy = 1.805

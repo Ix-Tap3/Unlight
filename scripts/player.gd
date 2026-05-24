@@ -82,7 +82,8 @@ func _process(delta: float) -> void:
 	if (Input.is_action_pressed("leftClick")):
 		ventouse_atck(mouse_pos)
 	if (Input.is_action_just_pressed("h")):
-		$SpringArm3D/Camera3D/HelpMenu.visible = !$SpringArm3D/Camera3D/HelpMenu.visible
+		$SpringArm3D/Camera3D/Control/HelpMenu.visible = !$SpringArm3D/Camera3D/Control/HelpMenu.visible
+		$SpringArm3D/Camera3D/Control/HelpMenu/AnimatedSprite2D.play("help")
 	_torch_blink()
 	move_and_slide()
 
