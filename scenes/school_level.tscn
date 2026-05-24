@@ -8,10 +8,6 @@
 [ext_resource type="AudioStream" uid="uid://byxmt0pi3fw7h" path="res://Sound/ArsN-B12-Game-jam-test.mp3" id="6_moirl"]
 [ext_resource type="PackedScene" uid="uid://cvdooh5myajie" path="res://assets/sceneassiete/invincible.tscn" id="7_1ptiu"]
 
-[sub_resource type="Environment" id="Environment_u6f7f"]
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.005
-
 [node name="SchoolLevel" type="Node3D" unique_id=561773970]
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1393704408]
@@ -28,9 +24,6 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.426131, 0)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=806930488]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 14, 0.64416504)
 light_energy = 0.01
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=15072835]
-environment = SubResource("Environment_u6f7f")
 
 [node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("3_mmpar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.477507, 2.0209937, -2.4638739)

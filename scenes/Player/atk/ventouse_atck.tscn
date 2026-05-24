@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cnqeos0vkku3r"]
+
+[ext_resource type="Script" uid="uid://wl5bx7546sco" path="res://scenes/Player/atk/ventouse_atck.gd" id="1_ctkus"]
+[ext_resource type="Texture2D" uid="uid://d3qhj2utg665j" path="res://assets/HomeMade/Player/ventouse/atck_fx/fx_ventouse1.png" id="2_s32hq"]
+[ext_resource type="Texture2D" uid="uid://clktr0mkikjqe" path="res://assets/HomeMade/Player/ventouse/atck_fx/fx_ventouse2.png" id="3_tlwei"]
+[ext_resource type="Texture2D" uid="uid://c5lkg66y3ffcn" path="res://assets/HomeMade/Player/ventouse/atck_fx/fx_ventouse3.png" id="4_676h3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6dqea"]
+size = Vector3(0.409729, 0.34558105, 0.418396)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jlsbk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s32hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tlwei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_676h3")
+}],
+"loop": false,
+"name": &"atck",
+"speed": 5.0
+}]
+
+[node name="ventouse_atck" type="Area3D" unique_id=1762686774]
+script = ExtResource("1_ctkus")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=749733983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091156006, 0.32720947, 0.004547119)
+shape = SubResource("BoxShape3D_6dqea")
+
+[node name="Timer" type="Timer" parent="." unique_id=1121752289]
+
+[node name="sprite" type="AnimatedSprite3D" parent="." unique_id=1104192098]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.10543108, 0.3484829, 0)
+sprite_frames = SubResource("SpriteFrames_jlsbk")
+animation = &"atck"
+frame = 2
+frame_progress = 1.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
