@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bt4jhw8v7n40h"]
 
-[ext_resource type="Texture2D" uid="uid://b5dqyrmlfx8xm" path="res://assets/tiles/grass2.png" id="1_vnqq0"]
+[ext_resource type="Texture2D" uid="uid://55drwgjriunc" path="res://assets/tiles/plantecouleur.png" id="1_rsrmy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw2ei"]
-albedo_texture = ExtResource("1_vnqq0")
+albedo_texture = ExtResource("1_rsrmy")
 uv1_scale = Vector3(3, 2, 1)
 texture_filter = 0
 

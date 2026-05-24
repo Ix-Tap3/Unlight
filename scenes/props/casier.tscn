@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://0atatxrjqs0n"]
+
+[ext_resource type="PackedScene" uid="uid://bgxrxgoytphvy" path="res://assets/glb/casier.glb" id="1_imsri"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8qth"]
+size = Vector3(1.9980469, 7.437561, 2.389038)
+
+[node name="casier" unique_id=1926351488 instance=ExtResource("1_imsri")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" parent_id_path=PackedInt32Array(1193378067) index="0" unique_id=168117943]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0" unique_id=1019701746]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0.008789067, 3.52841, -0.17706293)
+shape = SubResource("BoxShape3D_h8qth")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://btex6mplv3bt3"]
+
+[ext_resource type="MeshLibrary" uid="uid://f8tnk76an18t" path="res://assets/school_mesh_lib.tres" id="1_7s03t"]
+
+[node name="Node3D" type="Node3D" unique_id=834115069]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1507971705]
+mesh_library = ExtResource("1_7s03t")
+cell_size = Vector3(1, 1, 1)
+data = {
+"cells": PackedInt32Array(0, 65535, 1441810, 1, 65535, 1441810, 2, 65535, 1441810, 3, 65535, 1441810, 3, 0, 1441810, 2, 0, 1441810, 1, 0, 1441810, 0, 0, 1441810)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
