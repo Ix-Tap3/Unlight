@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://c7kuc0oqwljte" path="res://assets/glb/Soleil_fragment.glb" id="1_tt3if"]
 [ext_resource type="Script" uid="uid://cn4f641kryj4l" path="res://scripts/soleil_fragment.gd" id="2_4cuw6"]
 [ext_resource type="Script" uid="uid://cib6nj2g0wutf" path="res://scenes/soleilpickup.gd" id="3_4cuw6"]
+[ext_resource type="AudioStream" uid="uid://ccudeo4n4uoqe" path="res://Sound/Soleil_recup.mp3" id="4_14sot"]
+[ext_resource type="AudioStream" uid="uid://dg3q8g8fqu6n6" path="res://Sound/Soleil_Complet.mp3" id="5_tleqq"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tt3if"]
 lifetime_randomness = 1.0
@@ -50,5 +52,11 @@ script = ExtResource("3_4cuw6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1225405364]
 shape = SubResource("BoxShape3D_rq6xa")
+
+[node name="SoleilRecup" type="AudioStreamPlayer" parent="." index="4" unique_id=1278917476]
+stream = ExtResource("4_14sot")
+
+[node name="SoleilComplet" type="AudioStreamPlayer" parent="." index="5" unique_id=1898813610]
+stream = ExtResource("5_tleqq")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
