@@ -1062,6 +1062,7 @@ transform = Transform3D(-0.0081677595, 0, -0.49993327, 0, 0.5, 0, 0.49993327, 0,
 
 [node name="Monster2" parent="." unique_id=1163609735 instance=ExtResource("19_823ht")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9411557, 0.3212083, -6.168365)
+visible = false
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2076595995]
 transform = Transform3D(1, 0, 0, 0, 0.93938786, 0.3428564, 0, -0.3428564, 0.93938786, 0, 26.52185, 166.65593)
@@ -1525,3 +1526,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.3
 
 [node name="Grillage78" parent="." unique_id=81665836 instance=ExtResource("30_7iutg")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.374311, 2.9999998, 11.757957)
+
+[node name="Monster3" parent="." unique_id=860658085 instance=ExtResource("19_823ht")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0494723, 0.53282404, 8.8234005)
+visible = false
