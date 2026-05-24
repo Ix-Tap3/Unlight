@@ -21,7 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://cfr8cxe00lllp" path="res://scenes/Monster/monster.tscn" id="19_823ht"]
 [ext_resource type="PackedScene" uid="uid://co4w14p8u5qp1" path="res://scenes/soleil_base.tscn" id="20_cul54"]
 [ext_resource type="Script" uid="uid://e5lkw666t54o" path="res://scenes/directional_light_3d.gd" id="21_ctt1g"]
-[ext_resource type="PackedScene" uid="uid://clwgsht037rd1" path="res://scenes/soleil_fragment.tscn" id="22_y4yfb"]
 
 [node name="School" type="Node3D" unique_id=1030657540]
 
@@ -973,6 +972,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -21.
 
 [node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("3_afkkl")]
 transform = Transform3D(1, 0, 0, 0, 0.0015707765, 0.99999875, 0, -0.99999875, 0.0015707765, 4.815723, 0.8312409, -9.426996)
+has_ls = false
 
 [node name="Node3D2" parent="." unique_id=660344803 instance=ExtResource("4_vk1r2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5823989, 0.1748827, -5.636394)
@@ -1036,12 +1036,14 @@ transform = Transform3D(1, 0, 0, 0, 3.0767627, 0, 0, 0, 1, -23.521736, 0.5000001
 
 [node name="Node3D3" parent="." unique_id=1122729460 instance=ExtResource("3_afkkl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.533855, -0.9024747, 6.327718)
+has_ls = false
 
 [node name="Node3D4" parent="." unique_id=992964745 instance=ExtResource("3_afkkl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.480593, -0.9024747, 6.327718)
+has_ls = false
 
 [node name="Monster" parent="." unique_id=936662399 instance=ExtResource("19_823ht")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.179573, 1.0582889, 5.1216893)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.57027, 0.6467491, 5.1216893)
 
 [node name="Soleil_base" parent="." unique_id=1146332453 instance=ExtResource("20_cul54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5649215, 2.8534493, 3.3876505)
@@ -1061,12 +1063,3 @@ script = ExtResource("21_ctt1g")
 
 [node name="Soleil_base" parent="DirectionalLight3D" unique_id=149734758 instance=ExtResource("20_cul54")]
 transform = Transform3D(30, 0, 0, 0, 29.999998, 0, 0, 0, 29.999998, 0, -14.174835, 38.837463)
-
-[node name="Soleil_fragment" parent="." unique_id=1314601277 instance=ExtResource("22_y4yfb")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.260298, 0.3330412, 6.0363293)
-
-[node name="Soleil_fragment2" parent="." unique_id=1891818698 instance=ExtResource("22_y4yfb")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.1735845, 5, 8.75165)
-
-[node name="Soleil_fragment3" parent="." unique_id=806613541 instance=ExtResource("22_y4yfb")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.1619945, 3.8996506, 10.405391)
