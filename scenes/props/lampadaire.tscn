@@ -11,3 +11,15 @@ data = PackedVector3Array(-1, 0.0082, 1, -1, 0.5082, -1, -1, 0.5082, 1, -1, 0.00
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0" unique_id=892976452]
 shape = SubResource("ConcavePolygonShape3D_2owpg")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=1716358125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2636404, 2.845892, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." index="2" unique_id=312394559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10467911, 2.845892, -0.4665218)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." index="3" unique_id=927328282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30406284, 2.845892, -0.071186185)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." index="4" unique_id=351389579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24617958, 2.845892, 0.2075628)
