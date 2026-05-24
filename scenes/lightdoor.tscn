@@ -11,7 +11,7 @@ size = Vector3(1, 1, 0.2)
 material = SubResource("StandardMaterial3D_byv8n")
 size = Vector3(1, 1, 0.2)
 
-[node name="Door" type="Area3D" unique_id=2045923051 groups=["lightreactive"]]
+[node name="Door" type="StaticBody3D" unique_id=1280431382 groups=["lightreactive"]]
 script = ExtResource("1_byv8n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1181597893 groups=["lightreactive"]]

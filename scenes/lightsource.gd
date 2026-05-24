@@ -10,25 +10,26 @@ func _ready() -> void:
 		light.light_energy = Var.lightPower
 	else :
 		light.light_energy = 0
-	PARTICULE.emitting = 0
+	PARTICULE.emitting = false 
 
 func give_ls() -> void:
 	has_ls = true
 	light.light_energy = Var.lightPower
-	PARTICULE.emitting = 1
-	var myobjects = LitArea.get_overlapping_areas()
+	PARTICULE.emitting = true
+	
+	var myobjects = LitArea.get_overlapping_bodies()
 	for obj in myobjects:
 		if (obj.is_in_group("lightreactive")):
-			obj.set_lit()
+			if obj.has_method("set_lit"):
+				obj.set_lit()
 	
 func take_ls() -> void:
 	has_ls = false
 	light.light_energy = 0
-	var myobjects = LitArea.get_overlapping_areas()
-	PARTICULE.emitting = 0
+	PARTICULE.emitting = false
+	
+	var myobjects = LitArea.get_overlapping_bodies()
 	for obj in myobjects:
 		if (obj.is_in_group("lightreactive")):
-			obj.set_unlit()
-
-
-	
+			if obj.has_method("set_unlit"):
+				obj.set_unlit()

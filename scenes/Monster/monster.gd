@@ -12,12 +12,6 @@ func _ready() -> void:
 	myarea.area_entered.connect(_on_area_entered)
 	myarea.area_exited.connect(_on_area_exited)
 
-func _physics_process(delta: float) -> void:
-	# Gravité pour ton CharacterBody3D
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-	move_and_slide()
-
 func _process(delta: float) -> void:
 	# On écoute le clavier de manière ultra-précise ici
 	if self.visible and joueur_dans_la_zone:
