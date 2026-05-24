@@ -35,10 +35,12 @@ func ventouse_atck(mouse_pos):
 	var atck_instance = ventouse_preload.instantiate()
 	add_child(atck_instance)
 	atck_instance.position = position
-	if (mouse_pos.x > 500):
-		atck_instance.position = Vector3(0.300, -0.200, 0)
-	else:
+	if (mouse_pos.x > 300 && mouse_pos.x < 800):
+		atck_instance.position = Vector3(0, 0, 0)
+	elif (mouse_pos.x < 300):
 		atck_instance.position = Vector3(-0.300, -0.200, 0)
+	else:
+		atck_instance.position = Vector3(0.300, -0.200, 0)
 
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
