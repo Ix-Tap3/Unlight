@@ -19,11 +19,9 @@ func handle_rotation(angle:String) -> void :
 		angle_cible += deg_to_rad(45)
 	if angle == 'L':
 		angle_cible += deg_to_rad(-45)
-		
-		
-		
 
 func _anim():
+	
 	if (Input.is_action_pressed("down")):
 		animSprite.play("down")
 	elif(Input.is_action_pressed("up")):
@@ -32,8 +30,6 @@ func _anim():
 		animSprite.play("left")
 	elif(Input.is_action_pressed("right")):
 		animSprite.play("right")
-	else :
-		animSprite.play("idle")
 
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -63,7 +59,7 @@ func _process(delta: float) -> void:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
-		animSprite.play("idle")
+		animSprite.stop()
 		velocity.z = 0
 		velocity.x = 0
 	if (Input.is_action_pressed("rotateleft") && canrotate):
@@ -77,14 +73,11 @@ func _process(delta: float) -> void:
 	rotation.y = lerp_angle(rotation.y, angle_cible, 10 * delta)
 	move_and_slide()
 
-
 func _on_camera_rotation_cooldown_timeout() -> void:
 	canrotate = true
 
 func _on_torch_blinking_timeout() -> void:
 	torch_count -= 1
-	print("count : ", torch_count)
-	print("light : ", torch_light.light_energy)
 	if (torch_count == 0):
 		torch_blink = false
 		torch_count = 3
@@ -96,13 +89,10 @@ func _on_torch_blinking_timeout() -> void:
 		else:
 			torch_light.light_energy = 1
 
-
 func _torch_blink():
 		blinkTimer.start()
-
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 		if (body.is_in_group("monstre") && torch_blink == false):
 			torch_blink = true
 			_torch_blink()
-		#_torch_blinking(body)sd
