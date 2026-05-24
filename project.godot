@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="unlight"
-run/main_scene="uid://dj86nqpqd6fgt"
+run/main_scene="uid://bencrw84owlc0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
