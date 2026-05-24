@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c2jubip5egmp2"]
+
+[ext_resource type="PackedScene" uid="uid://caq41w8bdjyng" path="res://assets/glb/Lamp.glb" id="1_72t4t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxjgs"]
+size = Vector3(1, 4, 1)
+
+[node name="Lamp" unique_id=1426853156 instance=ExtResource("1_72t4t")]
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=558965082]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1622309898]
+shape = SubResource("BoxShape3D_hxjgs")
