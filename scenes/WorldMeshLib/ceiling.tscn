@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c5erlaobg6rsx"]
+
+[ext_resource type="PackedScene" uid="uid://t42xnkehmxim" path="res://assets/glb/ceiling.glb" id="1_n7fv0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k5u6v"]
+
+[node name="ceiling" unique_id=407619438 instance=ExtResource("1_n7fv0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube2" parent_id_path=PackedInt32Array(1547029415) index="0" unique_id=172262982]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube2/StaticBody3D" index="0" unique_id=570410478]
+shape = SubResource("BoxShape3D_k5u6v")
