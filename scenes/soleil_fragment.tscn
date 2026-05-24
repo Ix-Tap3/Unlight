@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://clwgsht037rd1"]
+
+[ext_resource type="PackedScene" uid="uid://c7kuc0oqwljte" path="res://assets/glb/Soleil_fragment.glb" id="1_tt3if"]
+[ext_resource type="Script" uid="uid://cn4f641kryj4l" path="res://scripts/soleil_fragment.gd" id="2_4cuw6"]
+[ext_resource type="Script" uid="uid://cib6nj2g0wutf" path="res://scenes/soleilpickup.gd" id="3_4cuw6"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tt3if"]
+lifetime_randomness = 1.0
+emission_shape_scale = Vector3(3, 2, 9)
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 0.5, 0)
+color = Color(1, 0.5647059, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4cuw6"]
+size = Vector3(0.01, 0.01, 0.01)
+
+[sub_resource type="Skin" id="Skin_rq6xa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rq6xa"]
+size = Vector3(2, 2, 2)
+
+[node name="Soleil_fragment" unique_id=1314601277 instance=ExtResource("1_tt3if")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("2_4cuw6")
+
+[node name="Cube" parent="." index="0" unique_id=815185988]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 0, 0.5183568, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=502679110]
+light_color = Color(1, 0.5764706, 0.18431373, 1)
+light_energy = 4.327
+light_size = 0.03
+
+[node name="particule" type="GPUParticles3D" parent="." index="2" unique_id=27909576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.33844775, 0.04788351, 0.25577497, 0.07101059)
+gi_mode = 2
+amount = 200
+amount_ratio = 0.235
+lifetime = 8.15
+preprocess = 0.43
+randomness = 1.0
+fixed_fps = 150
+process_material = SubResource("ParticleProcessMaterial_tt3if")
+draw_pass_1 = SubResource("BoxMesh_4cuw6")
+draw_skin = SubResource("Skin_rq6xa")
+
+[node name="Area3D" type="Area3D" parent="." index="3" unique_id=78068352]
+script = ExtResource("3_4cuw6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1225405364]
+shape = SubResource("BoxShape3D_rq6xa")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
