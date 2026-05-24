@@ -54,10 +54,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r1hw2"]
-radius = 0.4711914
-height = 1.1091309
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_mntuo"]
 atlas = ExtResource("3_xuq6v")
 region = Rect2(0, 32, 64, 32)
@@ -122,6 +118,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r1hw2"]
+radius = 0.4711914
+height = 1.1091309
+
 [node name="Monster" type="CharacterBody3D" unique_id=936662399 groups=["Maaannnstr", "monstre"]]
 visible = false
 script = ExtResource("1_bd1pl")
@@ -129,10 +129,6 @@ script = ExtResource("1_bd1pl")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1903926847]
 sprite_frames = SubResource("SpriteFrames_mntuo")
 animation = &"idle"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1545575510]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013061523, 0)
-shape = SubResource("CapsuleShape3D_r1hw2")
 
 [node name="Sprite3D" type="AnimatedSprite3D" parent="." unique_id=467565808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35352996, 0.35975066, 0)
@@ -142,3 +138,13 @@ frame_progress = 0.12571576
 [node name="SubViewport" type="SubViewport" parent="Sprite3D" unique_id=532522434]
 transparent_bg = true
 size = Vector2i(100, 100)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=164785648]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1545575510]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.013061523, 0)
+shape = SubResource("CapsuleShape3D_r1hw2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1391801827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.013061523, 0)
+shape = SubResource("CapsuleShape3D_r1hw2")

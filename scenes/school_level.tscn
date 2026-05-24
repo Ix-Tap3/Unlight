@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c2ugu276pqdyf" path="res://assets/sceneassiete/chaise.tscn" id="5_j37ly"]
 [ext_resource type="AudioStream" uid="uid://byxmt0pi3fw7h" path="res://Sound/ArsN-B12-Game-jam-test.mp3" id="6_moirl"]
 [ext_resource type="PackedScene" uid="uid://cvdooh5myajie" path="res://assets/sceneassiete/invincible.tscn" id="7_1ptiu"]
+[ext_resource type="PackedScene" uid="uid://cfr8cxe00lllp" path="res://scenes/Monster/monster.tscn" id="8_mxdys"]
+[ext_resource type="PackedScene" uid="uid://co4w14p8u5qp1" path="res://scenes/soleil_base.tscn" id="9_d5tdf"]
 
 [node name="SchoolLevel" type="Node3D" unique_id=561773970]
 
@@ -41,3 +43,9 @@ parameters/looping = true
 
 [node name="Node3D2" parent="." unique_id=660344803 instance=ExtResource("7_1ptiu")]
 transform = Transform3D(0.9984806, 0, -0.05510697, 0, 1, 0, 0.05510697, 0, 0.9984806, -11.108007, 0.063516855, 2.6462939)
+
+[node name="Monster" parent="." unique_id=936662399 instance=ExtResource("8_mxdys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.215414, 1.7377329, -2.1664426)
+
+[node name="Soleil_base" parent="." unique_id=1146332453 instance=ExtResource("9_d5tdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.813365, 3.276876, -11.182677)
