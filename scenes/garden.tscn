@@ -8,11 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://c2fsejphqaen3" path="res://scenes/props/plant_2.tscn" id="7_8csfy"]
 [ext_resource type="PackedScene" uid="uid://deh2dbtqi5klx" path="res://scenes/props/plant_3.tscn" id="8_dfwg7"]
 [ext_resource type="PackedScene" uid="uid://coo1jutn0o8vi" path="res://scenes/props/portail.tscn" id="9_5pv02"]
-[ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="9_la7hl"]
 [ext_resource type="PackedScene" uid="uid://5cj36mg28pds" path="res://scenes/props/grille.tscn" id="10_wiw1g"]
 [ext_resource type="PackedScene" uid="uid://cnlsknnyrj7oq" path="res://scenes/props/camionnatte.tscn" id="11_8csfy"]
 
-[node name="Node3D" type="Node3D" unique_id=1295921463]
+[node name="Node3D2" type="Node3D" unique_id=1295921463]
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1150052481]
 mesh_library = ExtResource("1_k83q7")
@@ -75,69 +74,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14.804541, 1.28, 15.918377)
 
 [node name="Spruce8" parent="." unique_id=1521427638 instance=ExtResource("4_wdstj")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8.456774, 1.28, 15.918377)
-
-[node name="Node3D" parent="." unique_id=730230447]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5013013, 1.2290503, 16.621088)
-
-[node name="Node3D9" parent="." unique_id=711833701]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.9500866, 0.92423856, 15.473118)
-
-[node name="Node3D10" parent="." unique_id=1147533240]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.9029398, 1.8401347, 10.636009)
-
-[node name="Node3D21" parent="." unique_id=1313832526]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.5771956, 1.8401347, 7.856159)
-
-[node name="Node3D13" parent="." unique_id=458271358]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.468069, 1.8401347, 10.636009)
-
-[node name="Node3D14" parent="." unique_id=645113787]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -6.6896954, 1.8401347, 9.409187)
-
-[node name="Node3D15" parent="." unique_id=1095060016]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.85524, 1.8401347, 9.409187)
-
-[node name="Node3D16" parent="." unique_id=1935681994]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -11.310429, 1.8401347, 14.882378)
-
-[node name="Node3D11" parent="." unique_id=333963383]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.16056, 1.8401347, 13.102743)
-
-[node name="Node3D12" parent="." unique_id=1755884301]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.16056, 1.8401347, 13.102743)
-
-[node name="Node3D2" parent="." unique_id=1051326478]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0431256, 1.2290503, 15.143209)
-
-[node name="Node3D3" parent="." unique_id=756629262]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.669588, 1.2290503, 16.492538)
-
-[node name="Node3D4" parent="." unique_id=604957315]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4688954, 1.2290503, 13.775875)
-
-[node name="Node3D5" parent="." unique_id=1811109446]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1178536, 1.2290503, 13.775875)
-
-[node name="Node3D6" parent="." unique_id=449098756]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.908008, 1.2290503, 12.806481)
-
-[node name="Node3D7" parent="." unique_id=70339895]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.908008, 1.2290503, 10.220655)
-
-[node name="Node3D17" parent="." unique_id=1754691379]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4433856, 1.2290503, 5.603879)
-
-[node name="Node3D18" parent="." unique_id=1409217245]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.402334, 1.2290503, 7.780029)
-
-[node name="Node3D19" parent="." unique_id=619196328]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.590822, 1.2290503, 6.0907354)
-
-[node name="Node3D20" parent="." unique_id=2036468169]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.816484, 1.2290503, 8.9306965)
-
-[node name="Node3D8" parent="." unique_id=185959903]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.129182, 1.2290503, 13.279973)
 
 [node name="Plant1" parent="." unique_id=642194539 instance=ExtResource("6_wiw1g")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.4227576, 0.97331417, 16.437614)
@@ -831,10 +767,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.281103, 0.9684608, 8.15444
 
 [node name="Plant39" parent="." unique_id=1968441292 instance=ExtResource("6_wiw1g")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -11.154686, 0.9684608, 9.00289)
-
-[node name="Player" parent="." unique_id=1165552443 instance=ExtResource("9_la7hl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46570253, 7.307131)
-visible = false
 
 [node name="Node3D22" parent="." unique_id=1964312605 instance=ExtResource("5_5pv02")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66097, 0.07313076, 10.249641)

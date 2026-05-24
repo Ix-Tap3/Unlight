@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dgrojq2v2s01f" path="res://assets/HomeMade/Player/ventouse/ventousesiderightwalk2.png" id="24_jn0uf"]
 [ext_resource type="Texture2D" uid="uid://dx04tafnk6g0m" path="res://assets/HomeMade/ui/Aide1.png" id="26_o05ft"]
 [ext_resource type="Texture2D" uid="uid://dq6uk3l4p0rdf" path="res://assets/HomeMade/ui/Aide2.png" id="27_nbg44"]
+[ext_resource type="Texture2D" uid="uid://bv4kiiqv48xyg" path="res://assets/HomeMade/ui/h.png" id="27_o05ft"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_18ciy"]
 radius = 0.1508789
@@ -205,6 +206,25 @@ margin = 0.1
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=457525268]
 transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 2.4335585, 2.7137966)
 
+[node name="Control2" type="Control" parent="SpringArm3D/Camera3D" unique_id=192571070]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SpringArm3D/Camera3D/Control2" unique_id=922557974]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpringArm3D/Camera3D/Control2/CanvasLayer" unique_id=1070515072]
+position = Vector2(1821, 981)
+scale = Vector2(4.6875, 4.6875)
+texture = ExtResource("27_o05ft")
+
 [node name="Control" type="Control" parent="SpringArm3D/Camera3D" unique_id=677083552]
 visible = false
 layout_mode = 3
@@ -236,6 +256,9 @@ frame_progress = 0.5205393
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=315059558 groups=["player"]]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.3785553, 0)
 shape = SubResource("CylinderShape3D_c4h5g")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=740099177]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.2, 0.9376659, 0)
 
 [connection signal="timeout" from="CameraRotationCooldown" to="." method="_on_camera_rotation_cooldown_timeout"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

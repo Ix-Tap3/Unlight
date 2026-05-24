@@ -1,54 +1,11 @@
 [gd_scene format=3 uid="uid://cfr8cxe00lllp"]
 
 [ext_resource type="Script" uid="uid://oohelyiki57a" path="res://scenes/Monster/monster.gd" id="1_bd1pl"]
-[ext_resource type="Texture2D" uid="uid://bi6kk4q765dl3" path="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Monk/Idle.png" id="1_rg2ae"]
 [ext_resource type="Texture2D" uid="uid://ln6wynkwqiif" path="res://assets/Tiny Swords (Free Pack)/Particle FX/Fire_01.png" id="3_xuq6v"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bd1pl"]
-atlas = ExtResource("1_rg2ae")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xuq6v"]
-atlas = ExtResource("1_rg2ae")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l4w75"]
-atlas = ExtResource("1_rg2ae")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qsbur"]
-atlas = ExtResource("1_rg2ae")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bchkb"]
-atlas = ExtResource("1_rg2ae")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1him"]
-atlas = ExtResource("1_rg2ae")
-region = Rect2(960, 0, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mntuo"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bd1pl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xuq6v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l4w75")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qsbur")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bchkb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o1him")
-}],
+"frames": [],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
