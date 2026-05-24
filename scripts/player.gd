@@ -41,7 +41,8 @@ func ventouse_atck(mouse_pos):
 		atck_instance.position = Vector3(-0.300, -0.200, 0)
 	else:
 		atck_instance.position = Vector3(0.300, -0.200, 0)
-	$CoupFourche.play()
+	if ($CoupFourche.playing == false):
+		$CoupFourche.play()
 
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
