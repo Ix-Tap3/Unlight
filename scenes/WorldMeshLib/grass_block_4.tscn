@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://deqyjb6h7depn"]
+
+[ext_resource type="Texture2D" uid="uid://c0yee22prl333" path="res://assets/tiles/plantedefffffffff.png" id="1_1exyd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw2ei"]
+albedo_texture = ExtResource("1_1exyd")
+uv1_scale = Vector3(3, 2, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_mlfo1"]
+material = SubResource("StandardMaterial3D_mw2ei")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
+
+[node name="GrassBlock1" type="MeshInstance3D" unique_id=1348567471]
+mesh = SubResource("BoxMesh_mlfo1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=653166447]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2120100349]
+shape = SubResource("BoxShape3D_kl2qe")

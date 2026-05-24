@@ -50,6 +50,7 @@
 [ext_resource type="Texture2D" uid="uid://b1oq3vgpkll1y" path="res://assets/glb/school_wall/school_wall16_fullintwall.png" id="48_c8ovm"]
 [ext_resource type="Texture2D" uid="uid://bhcrf38jvxpui" path="res://assets/glb/school_wall/school_wall16_intwindow2.png" id="49_7ukvr"]
 [ext_resource type="PackedScene" uid="uid://c243v3np7cd6n" path="res://scenes/WorldMeshLib/dirt.tscn" id="50_r45ru"]
+[ext_resource type="PackedScene" uid="uid://deqyjb6h7depn" path="res://scenes/WorldMeshLib/grass_block_4.tscn" id="51_c8ovm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wu2mk"]
 resource_name = "UpperText"
@@ -2866,3 +2867,5 @@ mesh = SubResource("ArrayMesh_j5wmr")
 shape = SubResource("BoxShape3D_lrvan")
 
 [node name="Dirt" parent="." unique_id=1312017414 instance=ExtResource("50_r45ru")]
+
+[node name="GrassBlock4" parent="." unique_id=1197499894 instance=ExtResource("51_c8ovm")]
