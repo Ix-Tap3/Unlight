@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi6kk4q765dl3"
-path.s3tc="res://.godot/imported/Idle.png-21e78c247ddcf36e65fed4abd64edadd.s3tc.ctex"
+uid="uid://dfb276h0faba6"
+path.s3tc="res://.godot/imported/Chaise_Chaise-text.png-af1a12a055a0a437450857b348a9cdb0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "4cc81e61cf45752dab1c6bc6430b1232"
+}
 
 [deps]
 
-source_file="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Monk/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-21e78c247ddcf36e65fed4abd64edadd.s3tc.ctex"]
+source_file="res://assets/glb/Chaise_Chaise-text.png"
+dest_files=["res://.godot/imported/Chaise_Chaise-text.png-af1a12a055a0a437450857b348a9cdb0.s3tc.ctex"]
 
 [params]
 

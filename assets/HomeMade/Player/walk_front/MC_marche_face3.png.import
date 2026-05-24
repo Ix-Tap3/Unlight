@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi6kk4q765dl3"
-path.s3tc="res://.godot/imported/Idle.png-21e78c247ddcf36e65fed4abd64edadd.s3tc.ctex"
+uid="uid://dfi3o0bhc08jh"
+path.s3tc="res://.godot/imported/MC_marche_face3.png-d66cca6699a9fd30f4d8b1b7edf57b3d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Tiny Swords (Free Pack)/Units/Red Units/Monk/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-21e78c247ddcf36e65fed4abd64edadd.s3tc.ctex"]
+source_file="res://assets/HomeMade/Player/walk_front/MC_marche_face3.png"
+dest_files=["res://.godot/imported/MC_marche_face3.png-d66cca6699a9fd30f4d8b1b7edf57b3d.s3tc.ctex"]
 
 [params]
 

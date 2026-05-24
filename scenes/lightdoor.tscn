@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cq8tsvwmq7mff"]
+
+[ext_resource type="Script" uid="uid://bimkc8nurwk6d" path="res://scripts/lightdoor.gd" id="1_byv8n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjcsv"]
+size = Vector3(1, 1, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_byv8n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fp6ak"]
+material = SubResource("StandardMaterial3D_byv8n")
+size = Vector3(1, 1, 0.2)
+
+[node name="Door" type="Area3D" unique_id=2045923051 groups=["lightreactive"]]
+script = ExtResource("1_byv8n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1181597893 groups=["lightreactive"]]
+shape = SubResource("BoxShape3D_vjcsv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1871712433]
+mesh = SubResource("BoxMesh_fp6ak")
