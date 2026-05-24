@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ck8vnafwci175"]
+
+[ext_resource type="Texture2D" uid="uid://bwbolla07txw0" path="res://assets/tiles/sapin.png" id="1_c4t8y"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tvhkj"]
+height = 2.2329102
+radius = 0.045898438
+
+[node name="Spruce" type="Node3D" unique_id=1949701463]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=884431411]
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_c4t8y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sprite3D" unique_id=732301103]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/StaticBody3D" unique_id=1256216021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07003483, -0.11645508, -2.0861626e-07)
+shape = SubResource("CylinderShape3D_tvhkj")

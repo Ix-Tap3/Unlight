@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c2fsejphqaen3"]
+
+[ext_resource type="Texture2D" uid="uid://dr1f25gdui4cn" path="res://assets/tiles/plante2.png" id="1_t7y6q"]
+
+[node name="Plant2" type="Node3D" unique_id=408640742]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1530965907]
+billboard = 2
+shaded = true
+alpha_cut = 2
+texture = ExtResource("1_t7y6q")

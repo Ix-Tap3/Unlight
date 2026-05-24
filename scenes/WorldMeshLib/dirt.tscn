@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://0wmnks6yfqw3"]
+[gd_scene format=3 uid="uid://c243v3np7cd6n"]
 
-[ext_resource type="Texture2D" uid="uid://ufcbbmfy2nte" path="res://assets/tiles/plantparcelle.png" id="1_8gi84"]
+[ext_resource type="Texture2D" uid="uid://dcwvuxmn02yi2" path="res://assets/tiles/terre.png" id="1_3orlh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw2ei"]
-albedo_texture = ExtResource("1_8gi84")
+albedo_texture = ExtResource("1_3orlh")
 uv1_scale = Vector3(3, 2, 1)
 texture_filter = 0
 
@@ -12,7 +12,7 @@ material = SubResource("StandardMaterial3D_mw2ei")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kl2qe"]
 
-[node name="GrassBlock3" type="MeshInstance3D" unique_id=1348567471]
+[node name="Dirt" type="MeshInstance3D" unique_id=1348567471]
 mesh = SubResource("BoxMesh_mlfo1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=653166447]

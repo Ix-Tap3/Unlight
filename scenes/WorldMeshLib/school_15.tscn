@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b82i7be1k04ka"]
+
+[ext_resource type="PackedScene" uid="uid://ciqbrv5kqsny7" path="res://assets/glb/school_wall/school_wall15.glb" id="1_ru5v6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mhc2v"]
+
+[node name="School15" unique_id=162857802 instance=ExtResource("1_ru5v6")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube2" parent_id_path=PackedInt32Array(674705415) index="0" unique_id=333625718]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube2/StaticBody3D" index="0" unique_id=972719249]
+shape = SubResource("BoxShape3D_mhc2v")
