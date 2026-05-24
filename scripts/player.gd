@@ -41,6 +41,7 @@ func ventouse_atck(mouse_pos):
 		atck_instance.position = Vector3(-0.300, -0.200, 0)
 	else:
 		atck_instance.position = Vector3(0.300, -0.200, 0)
+	$CoupFourche.play()
 
 func _process(delta: float) -> void:
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -58,8 +59,8 @@ func _process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept"):
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept"):
+		#velocity.y = JUMP_VELOCITY
 	
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	
@@ -68,6 +69,8 @@ func _process(delta: float) -> void:
 		_anim()
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if ($BruitPas.playing == false):
+			$BruitPas.play()
 	else:
 		animSprite.stop()
 		velocity.z = 0
@@ -94,8 +97,8 @@ func _on_camera_rotation_cooldown_timeout() -> void:
 
 func _torch_blink():
 	torch_count = randi()
-	if (torch_blink == true):
-		if (torch_count % 2 == 0):
+	if (torch_blink == true && torch_light.has_ls):
+		if (torch_count % 2 == 0 ):
 			torch_light.light_energy = 0
 		else:
 			torch_light.light_energy = 1

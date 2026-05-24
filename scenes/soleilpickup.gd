@@ -8,7 +8,6 @@ func _ready() -> void:
 	area_exited.connect(_on_area_exited) # On connecte aussi la sortie de zone
 
 func _process(delta: float) -> void:
-	# Le _process tourne en continu, il captera la touche "kill" à n'importe quel moment !
 	if joueur_dans_la_zone and Input.is_action_just_pressed("kill"):
 		_ramasser_item()
 
@@ -24,5 +23,12 @@ func _on_area_exited(area) -> void:
 
 func _ramasser_item() -> void:
 	Var.SolarFrag += 1
-	print("Item ramassé ! Score : ", Var.SolarFrag)
+	var noeud_son
+	if (Var.SolarFrag != 4)	:
+		noeud_son = self.get_parent().get_node("SoleilRecup")
+	else :
+		noeud_son = self.get_parent().get_node("SoleilComplet")
+	noeud_son.reparent(get_tree().current_scene)   
+	noeud_son.play()
+	noeud_son.finished.connect(noeud_son.queue_free)
 	self.get_parent().queue_free()

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bvln5ecg5bvq"]
 
 [ext_resource type="Script" uid="uid://sfdwt1wo5c8s" path="res://scripts/player.gd" id="1_gqjuk"]
+[ext_resource type="AudioStream" uid="uid://3sk1hp6mq3ha" path="res://Sound/Bruit_pas.mp3" id="2_nbg44"]
 [ext_resource type="Texture2D" uid="uid://b24mcdrend0sl" path="res://assets/HomeMade/Player/walk_front/MC_marche_face1.png" id="3_hvfru"]
+[ext_resource type="AudioStream" uid="uid://lvn1ieth45q6" path="res://Sound/Coup_fourche.mp3" id="3_jn0uf"]
 [ext_resource type="Texture2D" uid="uid://c6i23nj5cihax" path="res://assets/HomeMade/Player/walk_front/MC_marche_face2.png" id="4_a06cl"]
 [ext_resource type="PackedScene" uid="uid://c7xgwlc51vjp5" path="res://scenes/Player/flash_light.tscn" id="4_c4h5g"]
 [ext_resource type="Texture2D" uid="uid://dfi3o0bhc08jh" path="res://assets/HomeMade/Player/walk_front/MC_marche_face3.png" id="5_dl1wr"]
@@ -168,6 +170,14 @@ animations = [{
 [node name="Player" type="CharacterBody3D" unique_id=1165552443]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_gqjuk")
+
+[node name="BruitPas" type="AudioStreamPlayer" parent="." unique_id=715346975]
+stream = ExtResource("2_nbg44")
+volume_db = -12.0
+
+[node name="CoupFourche" type="AudioStreamPlayer" parent="." unique_id=1898455067]
+stream = ExtResource("3_jn0uf")
+volume_db = -7.298
 
 [node name="flash_light" parent="." unique_id=277005227 instance=ExtResource("4_c4h5g")]
 transform = Transform3D(-0.06453227, 0, -0.9979156, 0, 1, 0, 0.9979156, 0, -0.06453227, 0, 0, -0.016708255)
