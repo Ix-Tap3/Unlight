@@ -8,6 +8,7 @@ var joueur_dans_la_zone: bool = false
 
 func _ready() -> void:
 	$Sprite3D.play("default")
+	$AnimatedSprite3D.play("idle")
 	# On connecte les signaux d'Area à Area
 	myarea.area_entered.connect(_on_area_entered)
 	myarea.area_exited.connect(_on_area_exited)
