@@ -221,6 +221,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody3D" unique_id=1165552443]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_gqjuk")
 
 [node name="flash_light" parent="." unique_id=277005227 instance=ExtResource("4_c4h5g")]
@@ -346,6 +347,12 @@ layout_mode = 2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=517426447]
 light_energy = 1.805
+
+[node name="Area3D2" type="Area3D" parent="." unique_id=1919556147 groups=["player"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=315059558 groups=["player"]]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.3785553, 0)
+shape = SubResource("CylinderShape3D_c4h5g")
 
 [connection signal="timeout" from="CameraRotationCooldown" to="." method="_on_camera_rotation_cooldown_timeout"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
