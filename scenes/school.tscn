@@ -2,6 +2,8 @@
 
 [ext_resource type="MeshLibrary" uid="uid://f8tnk76an18t" path="res://assets/school_mesh_lib.tres" id="1_uh628"]
 [ext_resource type="PackedScene" uid="uid://bvln5ecg5bvq" path="res://scenes/Player/player.tscn" id="2_jemgs"]
+[ext_resource type="PackedScene" uid="uid://c448jry1lhhwy" path="res://scenes/lightSource.tscn" id="3_afkkl"]
+[ext_resource type="PackedScene" uid="uid://cvdooh5myajie" path="res://assets/sceneassiete/invincible.tscn" id="4_vk1r2"]
 
 [node name="School" type="Node3D" unique_id=1030657540]
 
@@ -15,3 +17,9 @@ metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="Player" parent="." unique_id=1165552443 instance=ExtResource("2_jemgs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3818674, 8.369671)
+
+[node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("3_afkkl")]
+transform = Transform3D(1, 0, 0, 0, 0.0015707765, 0.99999875, 0, -0.99999875, 0.0015707765, 4.815723, 0.8312409, -9.426996)
+
+[node name="Node3D2" parent="." unique_id=660344803 instance=ExtResource("4_vk1r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5823989, 0.1748827, -5.636394)

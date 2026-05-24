@@ -28,7 +28,8 @@ script = ExtResource("1_spjlj")
 transform = Transform3D(1, 0, 0, 0, -0.0057071573, 0.9999837, 0, -0.9999837, -0.0057071573, 0, 2.3890862, 0)
 light_energy = 16.0
 shadow_enabled = true
-spot_angle = 75.0
+spot_range = 4091.505
+spot_angle = 132.03
 
 [node name="Area3D" type="Area3D" parent="." unique_id=412864280 groups=["lightsource"]]
 
