@@ -25,8 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://ly2ml533h4sg" path="res://assets/HomeMade/Player/ventouse/ventousesiderightwalk1.png" id="23_nbg44"]
 [ext_resource type="Texture2D" uid="uid://dgrojq2v2s01f" path="res://assets/HomeMade/Player/ventouse/ventousesiderightwalk2.png" id="24_jn0uf"]
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_c4h5g"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_18ciy"]
 radius = 0.1508789
 height = 0.62475586
@@ -147,30 +145,10 @@ animations = [{
 height = 1.2428894
 radius = 2.46875
 
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_c4h5g"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1165552443]
 script = ExtResource("1_gqjuk")
-
-[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1331324013]
-transform = Transform3D(1, 0, 0, 0, 0.9477072, -0.3191412, 0, 0.3191412, 0.9477072, 0, 2.3042283, 0)
-shape = SubResource("SeparationRayShape3D_c4h5g")
-spring_length = 4.0
-margin = 0.1
-
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=457525268]
-transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 1.4653292, 2.7137966)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="SpringArm3D/Camera3D" unique_id=2116609942]
-
-[node name="ProgressBar" type="ProgressBar" parent="SpringArm3D/Camera3D/CanvasLayer" unique_id=1824444768]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -91.0
-offset_top = -98.0
-grow_horizontal = 0
-grow_vertical = 0
 
 [node name="flash_light" parent="." unique_id=277005227 instance=ExtResource("4_c4h5g")]
 transform = Transform3D(-0.06453227, 0, -0.9979156, 0, 1, 0, 0.9979156, 0, -0.06453227, 0, 0, -0.016708255)
@@ -199,6 +177,28 @@ shape = SubResource("CylinderShape3D_c4h5g")
 
 [node name="TorchBlinking" type="Timer" parent="." unique_id=2101249697]
 wait_time = 0.2
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1331324013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5902882, 0)
+shape = SubResource("SeparationRayShape3D_c4h5g")
+spring_length = 4.0
+margin = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=457525268]
+transform = Transform3D(1, 0, 0, 0, 0.9238194, 0.38282856, 0, -0.38282856, 0.9238194, 0, 2.4335585, 2.7137966)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SpringArm3D/Camera3D" unique_id=2116609942]
+
+[node name="ProgressBar" type="ProgressBar" parent="SpringArm3D/Camera3D/CanvasLayer" unique_id=1824444768]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -91.0
+offset_top = -98.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [connection signal="timeout" from="CameraRotationCooldown" to="." method="_on_camera_rotation_cooldown_timeout"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

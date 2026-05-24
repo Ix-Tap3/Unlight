@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cgv2box1ncnb8" path="res://scenes/props/bureau.tscn" id="5_oaecj"]
 [ext_resource type="PackedScene" uid="uid://get612avhvts" path="res://scenes/props/bibliotheque.tscn" id="7_ex17d"]
 [ext_resource type="PackedScene" uid="uid://0atatxrjqs0n" path="res://scenes/props/casier.tscn" id="8_r5pcs"]
+[ext_resource type="PackedScene" uid="uid://c448jry1lhhwy" path="res://scenes/lightSource.tscn" id="3_afkkl"]
+[ext_resource type="PackedScene" uid="uid://cvdooh5myajie" path="res://assets/sceneassiete/invincible.tscn" id="4_vk1r2"]
 
 [node name="School" type="Node3D" unique_id=1030657540]
 
@@ -141,7 +143,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.
 
 [node name="Table17" parent="Room1/Tables" unique_id=1451494456 instance=ExtResource("4_7cd4u")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -16.509733, 0, -2.5059514)
-
+_de
 [node name="Table18" parent="Room1/Tables" unique_id=131944380 instance=ExtResource("4_7cd4u")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.509733, 0, -2.5059514)
 
@@ -683,3 +685,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.862164, 0, -1.566863
 
 [node name="casier10" parent="Props" unique_id=1487007772 instance=ExtResource("8_r5pcs")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.862164, 0, -1.2359047)
+[node name="Node3D" parent="." unique_id=512677940 instance=ExtResource("3_afkkl")]
+transform = Transform3D(1, 0, 0, 0, 0.0015707765, 0.99999875, 0, -0.99999875, 0.0015707765, 4.815723, 0.8312409, -9.426996)
+
+[node name="Node3D2" parent="." unique_id=660344803 instance=ExtResource("4_vk1r2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5823989, 0.1748827, -5.636394)
