@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d1tla78kwrw4w"]
+
+[ext_resource type="PackedScene" uid="uid://bvgf7e7yd7e4h" path="res://assets/glb/Table.glb" id="1_jd0nb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v5i0k"]
+size = Vector3(1.43, 1.292, 1.96)
+
+[node name="Table" unique_id=1643362488 instance=ExtResource("1_jd0nb")]
+
+[node name="Cube" parent="." index="0" unique_id=1766283819]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="Area3D" type="StaticBody3D" parent="Cube" index="0" unique_id=815033757]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/Area3D" index="0" unique_id=2065527498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66822445, 0)
+shape = SubResource("BoxShape3D_v5i0k")
